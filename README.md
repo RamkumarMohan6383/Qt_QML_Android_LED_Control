@@ -4,7 +4,6 @@ In Android Termux
 
 Grant su permission to Qt app using adb:
 
-  adb shell
-  su
-  chmod 666 /dev/gpiomem
-
+  adb shell,
+  su,
+  chmod 666 /dev/gpiomem.

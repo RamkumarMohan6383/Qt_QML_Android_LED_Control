@@ -18,8 +18,6 @@ qt_add_qml_module(appNew_Control
     SOURCES
         GpioController/gpiocontroller.cpp
         GpioController/gpiocontroller.h
-        SOURCES
-        SOURCES jni/gpio_mmio.h
 )
 
 target_link_libraries(appNew_Control PRIVATE Qt6::Quick)
@@ -28,6 +26,7 @@ target_link_libraries(appNew_Control PRIVATE Qt6::Quick)
 add_library(gpiojni SHARED
     jni/jni_gpio.cpp
     jni/gpio_mmio.cpp
+    jni/gpio_mmio.h
 )
 
 set_target_properties(gpiojni PROPERTIES

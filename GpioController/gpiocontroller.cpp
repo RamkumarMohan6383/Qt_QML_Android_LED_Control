@@ -22,3 +22,11 @@ void GpioController::gpioPWM(int pin, int dutyCycle) {
         pin, dutyCycle
         );
 }
+
+void GpioController::setGpioPermission() {
+    QJniObject::callStaticMethod<void>(
+        "org/myapp/gpio/GpioJNI",
+        "setGpioPermission",
+        "()V"
+        );
+}

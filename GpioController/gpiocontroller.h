@@ -10,6 +10,7 @@ public:
     explicit GpioController(QObject *parent = nullptr);
     Q_INVOKABLE void gpioWrite(int pin, int value);
     Q_INVOKABLE void gpioPWM(int pin, int dutyCycle);
+    Q_INVOKABLE void setGpioPermission();
 };
 
 #endif // GPIOCONTROLLER_H
